@@ -32,7 +32,6 @@ class CoinFlipDataset(BaseDataset):
 
 @TEXT_POSTPROCESSORS.register_module('coinflip')
 def coinflip_pred_postprocess(text: str) -> str:
-    text = text.split('\n\n')[0]
     text = text.split('answer is ')[-1]
     match = re.search(r'(yes|no)', text.lower())
     if match:
