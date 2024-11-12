@@ -31,7 +31,7 @@ class LastLettersDataset(BaseDataset):
     
 @TEXT_POSTPROCESSORS.register_module('last_letters')
 def last_letters_pred_postprocess(text: str) -> str:
-    text = text.split('\n\n')[0]
     text = text.split('answer is ')[-1]
-    text = re.sub("\"|\'|\n|\.|\s","", text)
+    text = re.sub("\"|\'|\n|\.|\s", "", text)
+    text = re.sub(r"^[^a-zA-Z]+|[^a-zA-Z]+$", "", text)
     return text
