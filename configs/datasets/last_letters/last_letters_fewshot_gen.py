@@ -16,15 +16,15 @@ last_letters_infer_cfg = dict(
         type=PromptTemplate,
         template=dict(
             round=[
-                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Elon Musk" and concatenate them.\nAnswer:'),
-                dict(role='BOT', prompt='The last letter of "Elon" is "n". The last letter of "Musk" is "k". Concatenating them is "nk".\nSo the answer is nk.\n'),
-                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Larry Page" and concatenate them.\nAnswer:'),
-                dict(role='BOT', prompt='The last letter of "Larry" is "y". The last letter of "Page" is "e". Concatenating them is "ye".\nSo the answer is ye.\n'),
-                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Sergey Brin" and concatenate them.\nAnswer:'),
-                dict(role='BOT', prompt='The last letter of "Sergey" is "y". The last letter of "Brin" is "n". Concatenating them is "yn".\nSo the answer is yn.\n'),
-                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Bill Gates" and concatenate them.\nAnswer:'),
-                dict(role='BOT', prompt='The last letter of "Bill" is "l". The last letter of "Gates" is "s". Concatenating them is "ls".\nSo the answer is ls.\n'),
-                dict(role='HUMAN', prompt='Question: {question}\nAnswer:'),
+                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Elon Musk" and concatenate them.\nPlease answer directly without additional reasoning steps.\nAnswer:'),
+                dict(role='BOT', prompt='The answer is nk.\n'),
+                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Larry Page" and concatenate them.\nPlease answer directly without additional reasoning steps.\nAnswer:'),
+                dict(role='BOT', prompt='The answer is ye.\n'),
+                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Sergey Brin" and concatenate them.\nPlease answer directly without additional reasoning steps.\nAnswer:'),
+                dict(role='BOT', prompt='The answer is yn.\n'),
+                dict(role='HUMAN', prompt='Question: Take the last letters of the words in "Bill Gates" and concatenate them.\nPlease answer directly without additional reasoning steps.\nAnswer:'),
+                dict(role='BOT', prompt='The answer is ls.\n'),
+                dict(role='HUMAN', prompt='Question: {question}\nPlease answer directly without additional reasoning steps.\nAnswer:'),
             ]
         )
     ),
